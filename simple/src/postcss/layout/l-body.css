@@ -1,5 +1,5 @@
-/* Projectsection */
-/* .Project {
+Projectsection
+.Project {
     width: 100%;
     height: 100%;
     display: flex;
@@ -66,11 +66,11 @@
 img .img1 {
     width: 770;
     height: 829;
-} */
+} 
 
 /* About */
 
-/* .About__head {
+.About__head {
     width: 100%;
     height: 100%;
     padding: 5%;
@@ -123,10 +123,10 @@ img .img1 {
     justify-content: center;
     align-items: center;
     background-color: white;
-} */
+} 
 
 /* MainFocus/MissionStatement */
-/* .main {
+.main {
     width: 100%;
     height: 100vh;
 }
@@ -190,9 +190,9 @@ img .img1 {
     position: relative;
     align-items: center;
     justify-content: center;
-} */
+} 
 
-/* .OurProject {
+.OurProject {
     position: relative;
     width: 1170px;
     height: 765px;
@@ -255,15 +255,15 @@ img .img1 {
 }
 
 /* 2番目の画像を少しずらして重ねる */
-/* .img5Set img:nth-child(2) {
+.img5Set img:nth-child(2) {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0.8;
-} */
+} 
 
 /* OurProject__body--items_footのスタイル */
-/* .OurProject__body--items_foot {
+ .OurProject__body--items_foot {
     position: relative;
     width: 100%;
     display: flex;
@@ -296,10 +296,10 @@ img .img1 {
     height: 71px;
     color: white;
     background-color: rgb(51, 51, 51);
-} */
+}
 
 /* Contact フォームのスタイル */
-/* .Contact__body--form input {
+.Contact__body--form input {
     width: 100%;
     height: 50px; 
     padding: 10px 15px;
@@ -313,10 +313,10 @@ img .img1 {
 .Contact__body--form input[name="Message"] {
     height: 100px; 
     resize: vertical; 
-} */
+} 
 
 
-/* .Contact {
+.Contact {
     position: relative;
     width: 100%;
     height: 100%;
@@ -389,9 +389,5 @@ img .img1 {
     height: 71px;
     color: white;
     background-color: rgb(51, 51, 51);
-}  */
-
-
-
-
+}  
 
