@@ -1,9 +1,19 @@
-Projectsection
-.Project {
+.main {
     width: 100%;
     height: 100%;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    padding: 100px;
+}
+
+.Project {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: rocw;
     align-items: center;
 }
 
@@ -64,11 +74,16 @@ Projectsection
 }
 
 img .img1 {
-    width: 770;
-    height: 829;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 } 
 
 /* About */
+.About {
+    width: 100vw;
+    height: 100vh;
+}
 
 .About__head {
     width: 100%;
@@ -126,8 +141,8 @@ img .img1 {
 } 
 
 /* MainFocus/MissionStatement */
-.main {
-    width: 100%;
+.Main {
+    width: 100vw;
     height: 100vh;
 }
 
@@ -191,6 +206,11 @@ img .img1 {
     align-items: center;
     justify-content: center;
 } 
+
+.Our {
+    width: 100vw;
+    height: 100vh;
+}
 
 .OurProject {
     position: relative;
@@ -299,6 +319,11 @@ img .img1 {
 }
 
 /* Contact フォームのスタイル */
+.Contact {
+    width: 100vw;
+    height: 100vh;
+}
+
 .Contact__body--form input {
     width: 100%;
     height: 50px; 
