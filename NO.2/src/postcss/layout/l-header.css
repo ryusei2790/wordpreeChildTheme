@@ -1,0 +1,77 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    color: black;
+}
+
+.header nav {
+    list-style: disc;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.header nav li {
+    position: relative;
+    margin: 0;
+    font-size: 1rem;
+    color: black;
+}
+
+.header li:nth-child(1) { transform: translateY(0px); }
+.header li:nth-child(2) { transform: translateY(20px) translateX(20px); }
+.header li:nth-child(3) { transform: translateY(40px) translateX(40px); }
+
+.header li:hover {
+    transform: scale(1.05); 
+}
+
+.header li {
+    transition: transform 0.3s ease;
+  }
+  
+.header li:nth-child(1):hover { transform: translate(0px, 0px) translateX(5px); }
+.header li:nth-child(2):hover { transform: translate(20px, 20px) translateX(5px); }
+.header li:nth-child(3):hover { transform: translate(40px, 40px) translateX(5px); }
+
+nav {
+    opacity: 1;
+    transition: opcity 0.8s ease, transform 0.8 ease;
+}
+
+nav.show {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+.header__body {
+    position: relative;
+    margin: auto 0;
+    padding: 1rem 0;
+    width: 20vw;         /* ビューポート幅の20% */
+    max-width: 100px;    /* 最大幅を制限 */
+    height: auto; 
+}
+
+.header__body--image {
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    background: rgb(129, 248, 234);
+}
+
+.header__foot {
+    width: 40vw;         /* ビューポート幅の20% */
+    max-width: 400px;    /* 最大幅を制限 */
+    height: auto; 
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin: auto 5rem;
+}
+
