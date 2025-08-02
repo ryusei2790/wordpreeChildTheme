@@ -1,11 +1,13 @@
 $main-color : #444;
 
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
 html {
     max-width: 100vw;
 }
 
 body {
-
+    width: 100vw;
 }
 
 ul{

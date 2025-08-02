@@ -1,5 +1,7 @@
 $base-font-size: 15px;
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+
 html {
     font-size: $base-font-size;
 }

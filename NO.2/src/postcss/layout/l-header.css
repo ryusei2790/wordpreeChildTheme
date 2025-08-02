@@ -40,15 +40,6 @@
 .header li:nth-child(2):hover { transform: translate(20px, 20px) translateX(5px); }
 .header li:nth-child(3):hover { transform: translate(40px, 40px) translateX(5px); }
 
-nav {
-    opacity: 1;
-    transition: opcity 0.8s ease, transform 0.8 ease;
-}
-
-nav.show {
-    opacity: 0;
-    transform: translateY(-50px);
-}
 
 .header__body {
     position: relative;
@@ -60,18 +51,105 @@ nav.show {
 }
 
 .header__body--image {
-    border-top-right-radius: 10%;
-    border-bottom-right-radius: 10%;
-    background: rgb(129, 248, 234);
+    position: relative;
+    width: 200px;
+    height: 100px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 4px 10px 0px rgb(87, 85, 85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__body--image img {
+    position: relative;
+    width: 100px;
+    height: 100px;
 }
 
 .header__foot {
-    width: 40vw;         /* ビューポート幅の20% */
+    position: relative;
+    top: 10%;
+    right: 5%;
+    width: 50vw;         /* ビューポート幅の20% */
     max-width: 400px;    /* 最大幅を制限 */
     height: auto; 
     display: flex;
     flex-direction: row;
-    gap: 5rem;
-    margin: auto 5rem;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem;
 }
+
+/* 初期状態 */
+.header__foot--nav_head {
+    position: fixed;
+    top: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+    background-color: white; /* 必要に応じて調整 */
+}
+
+/* フェードアウト用のクラス */
+.header__foot--nav_head.fade-out {
+    transform: translateY(-30px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 初期状態 */
+.header__foot--nav_body {
+    position: fixed;
+    top: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    z-index: 1000;
+    background-color: white; /* 必要に応じて調整 */
+}
+
+/* フェードアウト用のクラス */
+.header__foot--nav_body.fade-out {
+    transform: translateY(-30px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 初期状態 */
+.header__foot--nav_foot {
+    position: fixed;
+    top: 0;
+    transition: transform 0.9s ease, opacity 0.9s ease;
+    z-index: 1000;
+    background-color: white; /* 必要に応じて調整 */
+}
+
+/* フェードアウト用のクラス */
+.header__foot--nav_foot.fade-out {
+    transform: translateY(-30px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.close-btn {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 100px; 
+    right: 30px;
+    opacity: 0;
+    transition: all 1.5s ease; 
+    z-index: 1001;
+}
+
+.close-btn img {
+    width: 100px;
+    height: 100px;
+}
+  
+.close-btn.visible {
+    top: 20px;
+    opacity: 1;
+}
+  
 
