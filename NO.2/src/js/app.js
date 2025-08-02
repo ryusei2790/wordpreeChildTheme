@@ -38,30 +38,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-$(document).ready(function() {
-  $(".title").lettering();
-  $(".button").lettering();
+document.addEventListener("DOMContentLoaded", function () {
+  function applyLettering(selector) {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach(el => {
+      const text = el.textContent;
+      el.innerHTML = '';
+      text.split('').forEach(char => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        el.appendChild(span);
+      });
+    });
+  }
+
+  applyLettering(".title");
+  applyLettering(".button");
+
+  setTimeout(() => {
+    animation();
+  }, 1000);
+
+  function animation () {
+    const timeline = gsap.timeline();
+
+    const titleSpans = document.querySelectorAll(".title span");
+    timeline.fromTo(titleSpans,
+      {
+        opacity: 0,
+        bottom: "-80px"
+      }, {
+        opacity: 1,
+        bottom: "0px",
+        ease: "back.out(1.7)",
+        stagger: 0.05
+      }
+    );
+
+  }
 });
-
-
-
-
-
-$(document).ready(function() {
-  animation();
-}, 1000);
-
-$('.button').click(function() {
-  animation();
-});
-
-
-function animation() {
-  var title1 = new TimelineMax();
-  title1.to(".button", 0, {visibility: 'hidden', opacity: 0})
-  title1.staggerFromTo(".title span", 0.5, 
-  {ease: Back.easeOut.config(1.7), opacity: 0, bottom: -80},
-  {ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0}, 0.05);
-  title1.to(".button", 0.2, {visibility: 'visible' ,opacity: 1})
-}
-
