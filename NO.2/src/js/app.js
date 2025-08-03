@@ -33,12 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
     navFoot.classList.remove("fade-out");
     closeBtn.classList.remove("visible");
   })
-});
 
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
   function applyLettering(selector) {
     const elements = document.querySelectorAll(selector);
     elements.forEach(el => {
@@ -59,8 +57,14 @@ document.addEventListener("DOMContentLoaded", function () {
     animation();
   }, 1000);
 
+  document.querySelectorAll('.button').forEach(btn => {
+    btn.addEventListener('click', animation);
+  });
+
   function animation () {
     const timeline = gsap.timeline();
+
+    timeline.set(".button", { visibility: 'hidden', opacity: 0 });
 
     const titleSpans = document.querySelectorAll(".title span");
     timeline.fromTo(titleSpans,
@@ -75,5 +79,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     );
 
+    timeline.to(".button", { visibility: 'visible', opacity: 1, duration: 0.2 });
+
   }
 });
+
+
+
