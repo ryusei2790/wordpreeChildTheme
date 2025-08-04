@@ -53,13 +53,28 @@ document.addEventListener("DOMContentLoaded", () => {
   applyLettering(".title");
   applyLettering(".button");
 
-  setTimeout(() => {
-    animation();
-  }, 1000);
+  // setTimeout(() => {
+  //   animation();
+  // }, 1000);
 
   document.querySelectorAll('.button').forEach(btn => {
     btn.addEventListener('click', animation);
   });
+
+  const serviceSection = document.querySelector('.service');
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        console.log("SERVICEセクションが表示されました");
+        animation();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+  observer.observe(serviceSection);
+
 
   function animation () {
     const timeline = gsap.timeline();
