@@ -1,6 +1,7 @@
 console.log('読み込み開始');
 
 document.addEventListener("DOMContentLoaded", () => {
+  //
   const navHead = document.querySelector(".header__foot--nav_head");
   const navBody = document.querySelector(".header__foot--nav_body");
   const navFoot = document.querySelector(".header__foot--nav_foot");
@@ -8,11 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(closeBtn);
   let lastScrollTop = 0;
   
+  //ナビゲーションバー
   window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     
 
-    if (currentScroll > lastScrollTop & currentScroll > 50) {
+    if (currentScroll > lastScrollTop && currentScroll > 50) {
       navHead.classList.add("fade-out");
       navBody.classList.add("fade-out");
       navFoot.classList.add("fade-out");
@@ -35,7 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
 
+  
 
+
+  //文字アニメーション
 
   function applyLettering(selector) {
     const elements = document.querySelectorAll(selector);
@@ -99,5 +104,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+//画像アニメーション
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("画像アニメーション準備");
+  gsap.registerPlugin(ScrollTrigger);
 
+  ScrollTrigger.defaults({
+    markers: true  // ← デバッグ用。動いたら削除してOK
+  });
 
+  const cards = document.querySelectorAll(".card");
+  console.log("カード要素数:", cards.length);
+
+  cards.forEach((el) => {
+    gsap.fromTo(
+      el, 
+      { y: 50, opacity: 0 }, 
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",
+          toggleActions: "play none none none"
+        },
+      }
+    );
+  });
+});
