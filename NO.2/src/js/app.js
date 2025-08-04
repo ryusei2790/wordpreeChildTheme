@@ -109,9 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("画像アニメーション準備");
   gsap.registerPlugin(ScrollTrigger);
 
-  ScrollTrigger.defaults({
-    markers: true  // ← デバッグ用。動いたら削除してOK
-  });
+  // ScrollTrigger.defaults({
+  //   markers: true  // ← デバッグ用。動いたら削除してOK
+  // });
 
   const cards = document.querySelectorAll(".card");
   console.log("カード要素数:", cards.length);
