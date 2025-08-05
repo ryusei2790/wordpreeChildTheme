@@ -1,5 +1,5 @@
 console.log('読み込み開始');
-
+// ヘッダーアニメーション
 document.addEventListener("DOMContentLoaded", () => {
   //
   const navHead = document.querySelector(".header__foot--nav_head");
@@ -104,6 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
+
 //画像アニメーション
 document.addEventListener("DOMContentLoaded", () => {
   console.log("画像アニメーション準備");
@@ -133,3 +135,17 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 });
+
+
+// 画像一枚目のアニメーション
+$(function() {
+  $('.intro').addClass('go');
+
+  $('.reload').click(function() {
+    $('.intro').removeClass('go').delay(200).queue(function(next) {
+      $('.intro').addClass('go');
+      next();
+    });
+
+  });
+})
