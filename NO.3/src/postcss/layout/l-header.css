@@ -11,38 +11,65 @@
     z-index: 1000;
 }
 
-.header nav {
-    list-style: disc;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    background: transparent;
-    z-index: 2000;
-}
-
-.header nav li {
-    position: relative;
-    margin: 0;
-    font-size: 1rem;
-    color: black;
-    background: transparent;
-}
-
-.header li:nth-child(1) { transform: translateY(0px); }
-.header li:nth-child(2) { transform: translateY(20px) translateX(20px); }
-.header li:nth-child(3) { transform: translateY(40px) translateX(40px); }
-
-.header li:hover {
-    transform: scale(1.05); 
-}
-
-.header li {
-    transition: transform 0.3s ease;
+.global-nav__item:nth-child(1) {
+    transform: translate(0px, 0px);
+  }
+  .global-nav__item:nth-child(2) {
+    transform: translate(20px, 20px);
+  }
+  .global-nav__item:nth-child(3) {
+    transform: translate(40px, 40px);
   }
   
-.header li:nth-child(1):hover { transform: translate(0px, 0px) translateX(5px); }
-.header li:nth-child(2):hover { transform: translate(20px, 20px) translateX(5px); }
-.header li:nth-child(3):hover { transform: translate(40px, 40px) translateX(5px); }
+  .global-nav__item {
+    transition: transform 0.3s ease;
+    cursor: pointer; /* ← マウスカーソルが変化するように */
+  }
+  
+  /* ホバー時の位置変化 */
+  .global-nav__item:nth-child(1):hover {
+    transform: translate(5px, 0px);
+  }
+  .global-nav__item:nth-child(2):hover {
+    transform: translate(25px, 20px);
+  }
+  .global-nav__item:nth-child(3):hover {
+    transform: translate(45px, 40px);
+  }
+  
+
+
+
+/* .global-nav__item:nth-child(1) {
+    transform: translateY(0px);
+  }
+  .global-nav__item:nth-child(2) {
+    transform: translateY(20px) translateX(20px);
+  }
+  .global-nav__item:nth-child(3) {
+    transform: translateY(40px) translateX(40px);
+  }
+  
+  .global-nav__item {
+    transition: transform 0.3s ease;
+  }
+
+  .global-nav__item:nth-child(1) {
+    transform: translateY(0px);
+  }
+  .global-nav__item:nth-child(2) {
+    transform: translateY(20px) translateX(20px);
+  }
+  .global-nav__item:nth-child(3) {
+    transform: translateY(40px) translateX(40px);
+  }
+  
+  .global-nav__item {
+    transition: transform 0.3s ease;
+  }
+
+  */
+
 
 
 .header__body {
@@ -156,4 +183,32 @@
     top: 20px;
     opacity: 1;
 }
+
   
+  /* .global-nav__list  {
+    display: flex;
+    align-items: center;
+  } */
+/*   
+  .global-nav__item {
+    list-style: none;
+    font-weight: 200;
+  }
+   */
+
+.header nav {
+    list-style: disc;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background: transparent;
+    z-index: 2000;
+}
+
+.global-nav__item {
+    position: relative;
+    margin: 0;
+    font-size: 1rem;
+    color: black;
+    background: transparent;
+}
