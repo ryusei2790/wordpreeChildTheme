@@ -175,7 +175,7 @@ class Curve {
           currentY: this.canvas.height * 5,
           curveY: this.canvas.height 
         })
-        .set('.is-slide-up:not(.global-nav__item)', {
+        .set('.is-slide-up', {
           opacity: 0,
           y: 60
         })
