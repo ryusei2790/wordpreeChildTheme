@@ -1,0 +1,96 @@
+body {
+    background-image: url('/assets/img/background.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0px;
+  
+    /* スムーズに背景を動かすため */
+    transition: background-position 0.2s ease;
+    z-index: -2;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.6); /* 白の透明レイヤー */
+    pointer-events: none; /* クリックなどのイベントを透過させる */
+    z-index: -1;
+  }
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+  
+ 
+  .heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.main-visual {
+  position: relative;
+  padding: 4vw;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20%;
+}
+
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.char {
+  color: #000000;
+  font-family: 'lora';
+  font-size: 32px;
+  letter-spacing: 0.1em;
+  white-space: break-spaces;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4vw;
+}
+
+.global-nav__list  {
+  display: flex;
+  align-items: center;
+}
+
+.global-nav__item {
+  list-style: none;
+  margin-left: 40px;
+  font-weight: 600;
+}
+
