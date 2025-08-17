@@ -1,57 +1,21 @@
-<!DOCTYPE html>
-<html lang="ja">
+<?php
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package nomal
+ */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    
-    <!-- WPでは自動でトップのCSSは読み込まれるっぽい -->
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <title>朝</title>
-</head>
+get_header();
+?>
 
-<body >
-    <p class="heading js-split-text"></p>
-    <header class="header">
-    <div class="header__body is-slide-up">
-        <div class="header__body--image">
-            <img src="/assets/img/logo.png" />
-        </div>
-    </div>
-    <div class="header__foot">
-        <nav class="header__foot--nav_head global-nav">
-            <ul class="header__foot--nav_head-nav global-nav__list">
-                <li class="is-slide-up global-nav__item"><a href="team">メンバー紹介</a></li>
-                <li class="is-slide-up global-nav__item">概要</li>
-                <li class="is-slide-up global-nav__item">歴史</li>
-            </ul>
-        </nav>
-        <nav class="header__foot--nav_body global-nav">
-            <ul class="header__foot--nav_head-nav global-nav__list">
-                <li class="is-slide-up global-nav__item"><a href="service">プロジェクト</a></li>
-                <li class="is-slide-up global-nav__item">サービス</li>
-                <li class="is-slide-up global-nav__item">展望</li>
-            </ul>
-        </nav>
-        <nav class="header__foot--nav_foot global-nav">
-            <ul class="header__foot--nav_head-nav global-nav__list">
-                <li class="is-slide-up global-nav__item"><a href="works">AboutUs</a></li>
-                <li class="is-slide-up global-nav__item">contact</li>
-                <li class="is-slide-up global-nav__item">AboutUs</li>
-            </ul>
-        </nav>
-        <button class="close-btn">
-            <img src="/assets/img/close.png" alt="Close Button" class="close">
-        </button>
-    </div>
-</header>
-    <section class="main" id="main">
+<section class="main" id="main">
         <div class="main-visual">
             <div class="main__body--head">
                 <p>Unleash your code. Unleash your way of working.</p>
@@ -90,7 +54,7 @@
         <div class="team__body">
             <div class="team__body--member">
                 <div class="team__body--member_img">
-                    <img src="/assets/img/__.png" alt="aniuma">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/__.png" alt="aniuma">
                 </div>
                 <div class="team__body--member_feat">
                     Founder & Vision Hacker
@@ -111,7 +75,7 @@
             </div>
             <div class="team__body--member">
                 <div class="team__body--member_img">
-                    <img src="/assets/img/__.png" alt="aniuma">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/__.png" alt="aniuma">
                 </div>
                 <div class="team__body--member_feat">
                     Code Wizard
@@ -132,7 +96,7 @@
             </div>
             <div class="team__body--member">
                 <div class="team__body--member_img">
-                    <img src="/assets/img/__.png" alt="aniuma">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/__.png" alt="aniuma">
                 </div>
                 <div class="team__body--member_feat">
                     Talk & Shutter Master
@@ -383,12 +347,8 @@
     <section class="works" id="works">
         
     </section>
-    <footer class="footer">
-    copyright
-</footer>
-    <foot>
-        <script type="text/javascript" src="/assets/js/bundle.min.js"></script>
-    </foot>
-</body>
 
-</html>
+
+<?php
+get_sidebar();
+get_footer();
