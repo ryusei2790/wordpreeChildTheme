@@ -42,6 +42,7 @@ get_header();
                 <div class="main__foot--body_foot">
                     <button >プロジェクトを始める</button>
                 </div>
+                
             </div>
         </div>
         <div id="js-loader">
