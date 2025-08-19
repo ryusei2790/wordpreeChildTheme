@@ -1,0 +1,163 @@
+.single-article{
+    max-width: var(--sa-content);
+    margin-inline:auto;
+    padding: clamp(24px, 4vw, 56px) clamp(16px, 4vw, 24px);
+    color: var(--sa-text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP",
+      "Hiragino Kaku Gothic ProN", "Yu Gothic", "メイリオ", sans-serif;
+    line-height: 1.9;
+    letter-spacing: .02em;
+  }
+  
+  /* ヘッダー */
+  .single-header h1{
+    margin: 0 0 .35em;
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  .post-meta{
+    margin: 0 0 .8rem;
+    color: var(--sa-muted);
+    font-size: .96rem;
+  }
+  
+  /* アイキャッチ */
+  .single-thumbnail{
+    margin: 0 0 1.2rem;
+    border-radius: var(--sa-radius);
+    overflow: hidden;
+    border: 1px solid var(--sa-border);
+    box-shadow: var(--sa-shadow);
+    background: var(--sa-card);
+  }
+  .single-thumbnail img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  
+  /* 本文 */
+  .single-content p{
+    margin: .9em 0 0;
+    max-width: 70ch; /* 行長を抑えて読みやすく */
+  }
+  .single-content a{
+    color: var(--sa-primary);
+    text-decoration-thickness: .08em;
+    text-underline-offset: .15em;
+  }
+  .single-content h2,
+  .single-content h3{
+    margin: 1.6em 0 .5em;
+    line-height: 1.3;
+  }
+  .single-content h2{ font-size: clamp(20px, 3.2vw, 28px); }
+  .single-content h3{ font-size: clamp(18px, 2.6vw, 22px); }
+  
+  /* 引用やコードが来ても崩れないように（任意） */
+  .single-content blockquote{
+    margin: 1em 0;
+    padding: .8em 1em;
+    border-left: 4px solid color-mix(in oklab, var(--sa-primary), white 30%);
+    background: #f8fafc;
+    color: var(--sa-text);
+    border-radius: 8px;
+  }
+  .single-content pre{
+    overflow:auto;
+    padding: 12px;
+    border: 1px solid var(--sa-border);
+    border-radius: 10px;
+    background: #0b1220;
+    color: #e5e7eb;
+    font-size: .95rem;
+  }
+  
+  /* シェアボタン */
+  .share-buttons{
+    margin-top: clamp(16px, 2.8vw, 24px);
+    padding: 12px 14px;
+    border: 1px solid var(--sa-border);
+    border-radius: 12px;
+    background: var(--sa-card);
+    box-shadow: var(--sa-shadow);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .share-buttons p{
+    margin: 0;
+    color: var(--sa-muted);
+  }
+  .share-buttons a{
+    display:inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--sa-border);
+    background: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .share-buttons a:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(15,23,42,.08);
+    border-color: color-mix(in oklab, var(--sa-primary), var(--sa-border) 60%);
+  }
+  
+  /* 前後記事ナビ */
+  .post-navigation{
+    margin-top: clamp(20px, 3.6vw, 32px);
+    display:flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .post-navigation a{
+    display:inline-flex;
+    align-items:center;
+    gap: 6px;
+    padding: 10px 14px;
+    border: 1px solid var(--sa-border);
+    border-radius: 999px;
+    background: var(--sa-card);
+    color: inherit;
+    text-decoration: none;
+    box-shadow: var(--sa-shadow);
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .post-navigation a:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(15,23,42,.08);
+    border-color: color-mix(in oklab, var(--sa-primary), var(--sa-border) 60%);
+  }
+  
+  /* フォーカス可視化（A11y） */
+  :focus-visible{
+    outline: 3px solid color-mix(in oklab, var(--sa-primary), white 20%);
+    outline-offset: 3px;
+    border-radius: 10px;
+  }
+  
+  /* 狭幅のときの余白微調整 */
+  @media (max-width: 420px){
+    .share-buttons{ padding: 10px 12px; }
+    .post-navigation a{ padding: 9px 12px; }
+  }
+  
+  /* ダークモード */
+  @media (prefers-color-scheme: dark){
+    :root{
+      --sa-text:#f8fafc; --sa-muted:#94a3b8;
+      --sa-border:#233047; --sa-card:#0f172a;
+      --sa-shadow:0 6px 28px rgba(0,0,0,.35);
+    }
+    .single-content blockquote{ background:#0e1628; }
+    .share-buttons a{ background:#0f172a; color:var(--sa-text); }
+  }
+  
+  /* モーション配慮 */
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; scroll-behavior:auto !important; }
+  }

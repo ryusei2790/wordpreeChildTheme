@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>固定ページ | 企業サイト</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__body is-slide-up">
+        <div class="header__body--image">
+            <a href="/">
+                <img src="/assets/img/logo.png" />
+            </a>
+        </div>
+    </div>
+    <div class="header__foot">
+        <nav class="header__foot--nav_head global-nav">
+            <ul class="header__foot--nav_head-nav global-nav__list">
+                <li class="is-slide-up global-nav__item"><a href="Company.html">会社情報</a></li>
+                <li class="is-slide-up global-nav__item"><a href="Services">サービス</a></li>
+                <li class="is-slide-up global-nav__item"><a href="Members">メンバー紹介</a></li>
+            </ul>
+        </nav>
+        <nav class="header__foot--nav_body global-nav">
+            <ul class="header__foot--nav_head-nav global-nav__list">
+                <li class="is-slide-up global-nav__item"><a href="News">ニュース</a></li>
+                <li class="is-slide-up global-nav__item"><a href="Blog">企業ブログ</a></li>
+                <li class="is-slide-up global-nav__item"><a href="Works">実績紹介</a></li>
+            </ul>
+        </nav>
+        <nav class="header__foot--nav_foot global-nav">
+            <ul class="header__foot--nav_head-nav global-nav__list">
+                <li class="is-slide-up global-nav__item"><a href="/FAQ">FAQ</a></li>
+                <li class="is-slide-up global-nav__item"><a href="/Contact">contact</a></li>
+                <li class="is-slide-up global-nav__item"><a href="/Recruit">採用情報</a></li>
+            </ul>
+        </nav>
+        <button class="close-btn">
+            <img src="/assets/img/close.png" alt="Close Button" class="close">
+        </button>
+    </div>
+</header>
+
+  <main class="page">
+    <article class="page-article">
+      <!-- ページタイトル -->
+      <header class="page-header">
+        <h1>会社概要</h1>
+      </header>
+
+      <!-- ページ本文 -->
+      <div class="page-content">
+        <h2>企業理念</h2>
+        <p>
+          私たちは「テクノロジーで未来を切り拓く」をミッションに掲げ、
+          社会に新しい価値を提供しています。
+        </p>
+
+        <h2>会社情報</h2>
+        <table class="company-table">
+          <tr>
+            <th>会社名</th>
+            <td>株式会社Example</td>
+          </tr>
+          <tr>
+            <th>所在地</th>
+            <td>東京都千代田区〇〇1-2-3</td>
+          </tr>
+          <tr>
+            <th>設立</th>
+            <td>2020年4月1日</td>
+          </tr>
+          <tr>
+            <th>代表者</th>
+            <td>代表取締役 山田太郎</td>
+          </tr>
+        </table>
+
+        <h2>アクセス</h2>
+        <p>JR東京駅 徒歩5分</p>
+        <div class="map">
+          <iframe src="https://maps.google.com/?q=Tokyo+Station&output=embed" width="100%" height="300" frameborder="0"></iframe>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    copyright
+</footer>
+</body>
+
+</html>

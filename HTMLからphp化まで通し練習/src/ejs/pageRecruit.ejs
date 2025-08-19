@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>採用情報 | 企業サイト</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <%- include('partials/_header') %>
+
+  <main>
+    <section class="recruit-section">
+      <h1>採用情報</h1>
+      <p>私たちは一緒に未来を創る仲間を募集しています。下記の職種について応募を受け付けています。</p>
+
+      <!-- 募集職種一覧 -->
+      <div class="job-list">
+        <article class="job-card">
+          <h2>エンジニア（バックエンド）</h2>
+          <p>AI・クラウド技術を活用した業務システム開発を担当していただきます。</p>
+          <ul>
+            <li>雇用形態：正社員</li>
+            <li>勤務地：東京都内（リモート可）</li>
+            <li>給与：経験・スキルに応じて優遇</li>
+          </ul>
+        </article>
+
+        <article class="job-card">
+          <h2>フロントエンドエンジニア</h2>
+          <p>ReactやVueを用いたWebアプリケーションの開発を担当していただきます。</p>
+          <ul>
+            <li>雇用形態：正社員</li>
+            <li>勤務地：東京都内（リモート可）</li>
+            <li>給与：経験・スキルに応じて優遇</li>
+          </ul>
+        </article>
+
+        <article class="job-card">
+          <h2>UI/UXデザイナー</h2>
+          <p>サービス全体のユーザー体験を設計し、デザインをリードしていただきます。</p>
+          <ul>
+            <li>雇用形態：正社員 / 契約社員</li>
+            <li>勤務地：東京都内（リモート可）</li>
+            <li>給与：経験・スキルに応じて優遇</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- 応募方法 -->
+      <section class="application-flow">
+        <h2>応募方法</h2>
+        <ol>
+          <li>下記の応募フォームより必要事項をご入力ください。</li>
+          <li>書類選考の上、面接に進んでいただく方へご連絡いたします。</li>
+          <li>面接後、採用可否をご連絡いたします。</li>
+        </ol>
+      </section>
+
+      <!-- 応募フォーム -->
+      <section class="application-form">
+        <h2>応募フォーム</h2>
+        <form action="/recruit/apply" method="post" enctype="multipart/form-data" class="contact-form">
+          <div class="form-group">
+            <label for="name">お名前 <span class="required">※必須</span></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">メールアドレス <span class="required">※必須</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="position">希望職種 <span class="required">※必須</span></label>
+            <select id="position" name="position" required>
+              <option value="">選択してください</option>
+              <option value="backend">エンジニア（バックエンド）</option>
+              <option value="frontend">フロントエンドエンジニア</option>
+              <option value="designer">UI/UXデザイナー</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="resume">履歴書・職務経歴書（PDF）</label>
+            <input type="file" id="resume" name="resume" accept=".pdf">
+          </div>
+
+          <div class="form-group">
+            <label for="message">自己PR・志望動機</label>
+            <textarea id="message" name="message" rows="6"></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn-submit">応募する</button>
+          </div>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <%- include('partials/_footer') %>
+</body>
+
+</html>

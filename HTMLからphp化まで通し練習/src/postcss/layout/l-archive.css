@@ -1,0 +1,90 @@
+.news-archive{
+    max-width: var(--na-content);
+    margin-inline: auto;
+    padding: clamp(28px, 5vw, 64px) clamp(16px, 4vw, 24px);
+    color: var(--na-text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "メイリオ", sans-serif;
+    line-height: 1.7;
+  }
+  
+  .news-archive .news__head h1{
+    margin: 0 0 .4em;
+    font-weight: 800;
+    line-height: 1.2;
+    font-size: clamp(28px, 4.8vw, 42px);
+  }
+  .news-archive .news__head p{
+    margin: 0;
+    color: var(--na-muted);
+    max-width: 70ch;
+  }
+  
+  /* 一覧をカード表示 */
+  .news-archive .news__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(16px, 2.2vw, 22px);
+    margin-top: clamp(16px, 2vw, 20px);
+  }
+  
+  .news-archive .news__item{
+    border: 1px solid var(--na-border);
+    border-radius: var(--na-radius);
+    background: var(--na-card);
+    box-shadow: var(--na-shadow);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    overflow: clip; /* 角丸内に収める */
+  }
+  .news-archive .news__item a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: clamp(16px, 3vw, 24px);
+    height: 100%;
+  }
+  .news-archive .news__item:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(15,23,42,.08);
+    border-color: color-mix(in oklab, var(--na-primary), var(--na-border) 60%);
+  }
+  
+  /* 中のタイポグラフィ */
+  .news-archive time{
+    display: inline-block;
+    font-size: .95rem;
+    color: var(--na-muted);
+    margin-bottom: .35rem;
+  }
+  .news-archive h2{
+    font-size: clamp(18px, 2.8vw, 22px);
+    line-height: 1.35;
+    margin: 0 0 .35rem;
+    font-weight: 700;
+    color: var(--na-text);
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* タイトルは長すぎる場合2行で省略 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .news-archive p{
+    margin: 0;
+    color: var(--na-muted);
+    max-width: 70ch;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* 概要は3行で省略 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* フォーカスリング（アクセシビリティ） */
+  .news-archive a:focus-visible{
+    outline: 3px solid color-mix(in oklab, var(--na-primary), white 20%);
+    outline-offset: 3px;
+    border-radius: 10px;
+  }
+  
+  /* 余白が詰まりすぎる狭幅の微調整 */
+  @media (max-width: 400px){
+    .news-archive .news__item a{ padding: 14px; }
+  }
+  

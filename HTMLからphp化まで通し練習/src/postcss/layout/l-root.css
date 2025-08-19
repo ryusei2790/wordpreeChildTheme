@@ -1,0 +1,56 @@
+/* ===== Base & Theme ====================================================== */
+:root{
+    --bg: #ffffff;
+    --text: #0f172a;         /* slate-900 */
+    --muted: #475569;        /* slate-600 */
+    --border: #e5e7eb;       /* gray-200 */
+    --card: #ffffff;
+    --primary: #2563eb;      /* readable blue */
+    --shadow: 0 6px 24px rgba(15,23,42,.06);
+    --radius: 14px;
+    --content: 1120px;
+  }
+  
+  *,
+  *::before,
+  *::after{ box-sizing: border-box; }
+  
+  html{ scroll-behavior: smooth; }
+  body{
+    margin: 0;
+    color: var(--text);
+    background: var(--bg);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "メイリオ", sans-serif;
+    line-height: 1.7;
+    letter-spacing: .02em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img,svg,video{ max-width: 100%; height: auto; }
+  
+  /* セクションの共通レイアウト（左右の読みやすい余白と最大幅） */
+  section{
+    max-width: var(--content);
+    margin-inline: auto;
+    padding: clamp(32px, 5vw, 72px) clamp(16px, 4vw, 24px);
+  }
+  
+  /* タイポグラフィ */
+  h1,h2{ line-height: 1.25; margin: 0 0 .6em; font-weight: 700; }
+  h1{ font-size: clamp(28px, 4.6vw, 44px); letter-spacing: .01em; }
+  h2{ font-size: clamp(20px, 3.2vw, 28px); color: var(--muted); }
+  
+  p{ margin: .6em 0 0; max-width: 70ch; }
+  
+  /* リンクの扱い（カード内は装飾なし、単文中は下線） */
+  a{ color: inherit; text-decoration-thickness: .08em; text-underline-offset: .15em; }
+  .news__item a,
+  .servicesClass a{ text-decoration: none; display: block; color: inherit; }
+  
+  /* フォーカスの見やすいリング */
+  :focus-visible{
+    outline: 3px solid color-mix(in oklab, var(--primary), white 20%);
+    outline-offset: 2px;
+    border-radius: 8px;
+  }

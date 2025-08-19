@@ -1,0 +1,50 @@
+.Contact > h1{ margin-bottom: .4em; }
+.Contact > p{ color: var(--muted); }
+
+.contact-form{
+  margin-top: 1rem;
+  display: grid;
+  gap: 18px;
+  max-width: 720px;
+}
+.form-group label{
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: .4rem;
+}
+.required{
+  color: var(--primary);
+  font-weight: 700;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  font: inherit;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+input:focus-visible,
+textarea:focus-visible{
+  border-color: color-mix(in oklab, var(--primary), #fff 30%);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--primary), #fff 80%);
+  outline: none;
+}
+.btn-submit{
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .03em;
+  transition: transform .08s ease, box-shadow .18s ease, opacity .18s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, .25);
+}
+.btn-submit:hover{ opacity: .95; transform: translateY(-1px); }
+.btn-submit:active{ transform: translateY(0); }

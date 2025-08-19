@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>記事詳細 | 企業サイト</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <%- include('partials/_header') %>
+
+  <main class="single-page">
+    <article class="single-article">
+      <!-- 記事タイトル -->
+      <header class="single-header">
+        <h1>新サービスリリースのお知らせ</h1>
+        <p class="post-meta">2025年8月1日 | カテゴリ: News</p>
+      </header>
+
+      <!-- アイキャッチ画像 -->
+      <figure class="single-thumbnail">
+        <img src="images/news-sample.jpg" alt="新サービスのイメージ">
+      </figure>
+
+      <!-- 本文 -->
+      <div class="single-content">
+        <p>
+          当社では2025年8月1日より、新しいクラウドサービスを正式リリースいたしました。
+          本サービスは、業務効率化を目的とした最新のAI技術を活用しています。
+        </p>
+        <p>
+          詳細についてはサービスページをご覧ください。今後もお客様の課題解決をサポートするソリューションを提供してまいります。
+        </p>
+      </div>
+
+      <!-- シェアボタン（任意） -->
+      <div class="share-buttons">
+        <p>この記事をシェアする：</p>
+        <a href="#">Twitter</a> | 
+        <a href="#">Facebook</a> | 
+        <a href="#">LinkedIn</a>
+      </div>
+
+      <!-- 前後記事リンク -->
+      <nav class="post-navigation">
+        <a href="single-prev.html" class="prev-post">← 前の記事</a>
+        <a href="single-next.html" class="next-post">次の記事 →</a>
+      </nav>
+    </article>
+  </main>
+
+  <%- include('partials/_footer') %>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+.news-archive{
+    max-width: var(--na-content);
+    margin-inline:auto;
+    padding: clamp(28px,5vw,64px) clamp(16px,4vw,24px);
+    color: var(--na-text);
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic","メイリオ",sans-serif;
+    line-height:1.7;
+  }
+  
+  .news-archive .news__head h1{
+    margin:0 0 .4em; font-weight:800; line-height:1.2;
+    font-size: clamp(28px,4.8vw,42px);
+  }
+  .news-archive .news__head p{ margin:0; color:var(--na-muted); max-width:70ch; }
+  
+  /* 一覧カード */
+  .news-archive .news__list{
+    display:grid; gap: clamp(16px,2.2vw,22px);
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    margin-top: clamp(16px,2vw,20px);
+  }
+  .news-archive .news__item{
+    border:1px solid var(--na-border); border-radius:var(--na-radius);
+    background:var(--na-card); box-shadow:var(--na-shadow);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    overflow: clip;
+  }
+  .news-archive .news__item a{
+    display:grid; grid-template-rows:auto 1fr; gap:12px;
+    color:inherit; text-decoration:none; padding: clamp(16px,3vw,24px);
+    height:100%;
+  }
+  .news-archive .news__item:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(15,23,42,.08);
+    border-color: color-mix(in oklab, var(--na-primary), var(--na-border) 60%);
+  }
+  
+  /* もしサムネ画像を置く場合（任意：<img class="thumb">） */
+  .news-archive .thumb{
+    width:100%; aspect-ratio: 16/9; object-fit:cover;
+    border-radius: 10px;
+  }
+  
+  /* メタ行（任意：<div class="news__meta"><span class="tag">…</span></div>） */
+  .news-archive .news__meta{
+    display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+  }
+  .news-archive time{
+    font-size:.95rem; color:var(--na-muted);
+  }
+  .news-archive .tag{
+    font-size:.8rem; font-weight:700; line-height:1;
+    padding:.4em .6em; border-radius:999px;
+    background: color-mix(in oklab, var(--na-primary), white 85%);
+    color: var(--na-primary);
+  }
+  
+  /* タイトル・本文の行数制御 */
+  .news-archive h2{
+    margin:.2rem 0 .35rem; font-weight:700;
+    color:var(--na-text); line-height:1.35;
+    font-size: clamp(18px,2.8vw,22px);
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .news-archive p{
+    margin:0; color:var(--na-muted); max-width:70ch;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  
+  /* フォーカスリング */
+  .news-archive a:focus-visible{
+    outline:3px solid color-mix(in oklab, var(--na-primary), white 20%);
+    outline-offset:3px; border-radius:10px;
+  }
+  
+  /* 微調整 */
+  @media (max-width:400px){
+    .news-archive .news__item a{ padding:14px; }
+  }
+  
+  /* ダークモード */
+  @media (prefers-color-scheme: dark){
+    :root{
+      --na-text:#f8fafc; --na-muted:#94a3b8; --na-border:#233047;
+      --na-card:#0f172a; --na-shadow:0 6px 28px rgba(0,0,0,.35);
+    }
+  }
+  
+  /* モーション配慮 */
+  @media (prefers-reduced-motion: reduce){
+    .news-archive .news__item{ transition:none; }
+  }

@@ -1,0 +1,91 @@
+.members{
+    max-width: var(--mb-content);
+    margin-inline:auto;
+    padding: clamp(28px,5vw,64px) clamp(16px,4vw,24px);
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP",sans-serif;
+    line-height:1.7;
+    color:var(--mb-text);
+  }
+  
+  .membersClass{
+    display:grid;
+    gap: clamp(16px,2.4vw,24px);
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  }
+  
+  .membersClass a{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    border:1px solid var(--mb-border);
+    border-radius:var(--mb-radius);
+    background:var(--mb-card);
+    box-shadow:var(--mb-shadow);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    height:100%;
+  }
+  .membersClass a:hover{
+    transform: translateY(-2px);
+    box-shadow:0 10px 28px rgba(15,23,42,.08);
+    border-color: color-mix(in oklab, var(--mb-primary), var(--mb-border) 60%);
+  }
+  
+  /* 内部のテキスト配置 */
+  .members__head{
+    padding: clamp(16px,3vw,24px);
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:.4rem;
+  }
+  
+  /* 名前 */
+  .members__head h1{
+    font-size: clamp(20px,3.4vw,24px);
+    margin:0;
+    font-weight:700;
+    line-height:1.3;
+  }
+  
+  /* キャッチコピー */
+  .members__head h2{
+    font-size: clamp(16px,2.8vw,18px);
+    margin:0;
+    font-weight:600;
+    color:var(--mb-primary);
+  }
+  
+  /* コメント */
+  .members__head p{
+    margin:.3rem 0 0;
+    color:var(--mb-muted);
+    font-size:.95rem;
+    max-width:60ch;
+  }
+  
+  /* 写真を入れる場合 (例: <img class="member-photo"> を追加) */
+  .member-photo{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius: var(--mb-radius) var(--mb-radius) 0 0;
+    display:block;
+  }
+  
+  /* フォーカスリング */
+  .membersClass a:focus-visible{
+    outline:3px solid color-mix(in oklab, var(--mb-primary), white 20%);
+    outline-offset:3px;
+    border-radius:var(--mb-radius);
+  }
+  
+  /* ダークモード */
+  @media (prefers-color-scheme: dark){
+    :root{
+      --mb-text:#f8fafc;
+      --mb-muted:#94a3b8;
+      --mb-border:#233047;
+      --mb-card:#0f172a;
+      --mb-shadow:0 6px 28px rgba(0,0,0,.35);
+    }
+  }

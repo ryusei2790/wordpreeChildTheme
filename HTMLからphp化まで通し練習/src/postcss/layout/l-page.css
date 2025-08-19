@@ -1,0 +1,138 @@
+.page-article{
+    max-width: var(--pa-content);
+    margin-inline: auto;
+    padding: clamp(24px, 4vw, 56px) clamp(16px, 4vw, 24px);
+    color: var(--pa-text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "メイリオ", sans-serif;
+    line-height: 1.8;
+    letter-spacing: .02em;
+  }
+  
+  .page-header h1{
+    margin: 0 0 .5em;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  
+  .page-content h2{
+    margin: 1.6em 0 .5em;
+    font-size: clamp(20px, 3.2vw, 28px);
+    line-height: 1.3;
+    color: var(--pa-text);
+    position: relative;
+  }
+  .page-content h2::after{
+    content:"";
+    display:block;
+    width: 48px; height: 3px;
+    margin-top: .4em;
+    background: color-mix(in oklab, var(--pa-primary), white 20%);
+    border-radius: 999px;
+  }
+  
+  .page-content p{
+    margin: .6em 0 0;
+    color: var(--pa-text);
+    max-width: 70ch; /* 行長を制御して読みやすく */
+  }
+  
+  /* ===== Company Info Table ============================================== */
+  .company-table{
+    width: 100%;
+    margin-top: .8rem;
+    border: 1px solid var(--pa-border);
+    border-radius: var(--pa-radius);
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    background: var(--pa-card);
+    box-shadow: var(--pa-shadow);
+  }
+  .company-table th,
+  .company-table td{
+    padding: 14px 16px;
+    vertical-align: top;
+    text-align: left;
+    border-bottom: 1px solid var(--pa-border);
+  }
+  .company-table tr:last-child th,
+  .company-table tr:last-child td{ border-bottom: none; }
+  
+  /* 左列（見出しセル）を強調 */
+  .company-table th{
+    width: 32%;
+    font-weight: 700;
+    background: #f8fafc;
+    color: var(--pa-text);
+  }
+  
+  /* ゼブラ（視線誘導） */
+  .company-table tr:nth-child(even) td{
+    background: #fcfdff;
+  }
+  
+  /* モバイル：表を読みやすい縦並びに */
+  @media (max-width: 640px){
+    .company-table{ box-shadow:none; }
+    .company-table th,
+    .company-table td{
+      display:block;
+      width: 100%;
+      border-bottom: none;
+      padding: 10px 14px;
+    }
+    .company-table tr + tr{ border-top: 1px solid var(--pa-border); }
+    .company-table th{
+      background: transparent;
+      color: var(--pa-muted);
+      padding-bottom: 4px;
+    }
+    .company-table td{
+      padding-top: 0;
+      background: transparent;
+    }
+  }
+  
+  /* ===== Map (Google Maps iframe) ======================================== */
+  .map{
+    margin-top: .8rem;
+    border: 1px solid var(--pa-border);
+    border-radius: var(--pa-radius);
+    overflow: hidden;
+    box-shadow: var(--pa-shadow);
+    background: var(--pa-card);
+  }
+  .map iframe{
+    display:block;
+    width: 100%;
+    height: clamp(240px, 40vw, 380px);
+    border: 0;
+  }
+  
+  /* ===== Links / Focus ==================================================== */
+  .page-article a{
+    color: var(--pa-primary);
+    text-decoration-thickness: .08em;
+    text-underline-offset: .15em;
+  }
+  :focus-visible{
+    outline: 3px solid color-mix(in oklab, var(--pa-primary), white 20%);
+    outline-offset: 3px;
+    border-radius: 10px;
+  }
+  
+  /* ===== Dark mode / Reduced motion ====================================== */
+  @media (prefers-color-scheme: dark){
+    :root{
+      --pa-text:#f8fafc; --pa-muted:#94a3b8;
+      --pa-border:#233047; --pa-card:#111a2e;
+      --pa-shadow:0 6px 28px rgba(0,0,0,.35);
+    }
+    .company-table th{ background:#0f172a; }
+    .company-table tr:nth-child(even) td{ background:#0e1628; }
+  }
+  
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; }
+  }
