@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Corporate Template</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    
+    <!-- WPでは自動でトップのCSSは読み込まれるっぽい -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <a class="skiplink" href="#main">メインへスキップ</a>
+
+  <header class="header" role="banner">
+    <header class="header">
+        <div class="header__body is-slide-up">
+          <div class="header__body--image">
+            <a href="/">
+              <img src="assets/img/logo.png" alt="Company Logo" />
+            </a>
+          </div>
+        </div>
+      
+        <div class="header__foot">
+          <nav class="header__foot--nav_head global-nav">
+            <ul class="header__foot--nav_head-nav global-nav__list">
+              <li class="is-slide-up global-nav__item"><a href="/company.html">会社情報</a></li>
+              <li class="is-slide-up global-nav__item"><a href="/services.html">サービス</a></li>
+              <li class="is-slide-up global-nav__item"><a href="/member.html">メンバー紹介</a></li>
+            </ul>
+          </nav>
+      
+          <nav class="header__foot--nav_body global-nav">
+            <ul class="header__foot--nav_head-nav global-nav__list">
+              <li class="is-slide-up global-nav__item"><a href="/news.html">ニュース</a></li>
+              <li class="is-slide-up global-nav__item"><a href="/blog.html">企業ブログ</a></li>
+              <li class="is-slide-up global-nav__item"><a href="/works.html">実績紹介</a></li>
+            </ul>
+          </nav>
+      
+          <nav class="header__foot--nav_foot global-nav">
+            <ul class="header__foot--nav_head-nav global-nav__list">
+              <li class="is-slide-up global-nav__item"><a href="/faq.html">FAQ</a></li>
+              <li class="is-slide-up global-nav__item"><a href="/contact.html">Contact</a></li>
+              <li class="is-slide-up global-nav__item"><a href="/recruit.html">採用情報</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+  </header>
+
+  <main id="main" class="main" role="main">
+    <!-- 2) Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero__inner container">
+        <!-- <button class="hero__cta button button--primary" type="button">CLICK HERE!</button> -->
+        <a href="#about" class="hero__scroll" aria-label="Aboutへスクロール">
+            <span class="hero__scroll--label">Scroll</span>
+            <span class="hero__scroll--icon" aria-hidden="true">⌄</span>
+          </a>
+      </div>
+    </section>
+
+    <!-- 3) Headline / Subheadline / Supporting text -->
+    <section class="headline" id="about">
+      <div class="headline__inner container">
+        <h1 class="headline__title">Zenovith</h1>
+        <p class="headline__subtitle"></p>
+        <p class="headline__body headline__body--head"></p>
+      </div>
+    </section>
+
+    <!-- 4) Parallax Image (グレー帯・背景固定) -->
+    <section class="parallax" aria-label="パララックス帯（ダミー）">
+      <div class="parallax__layer">
+        <div class="logo-marquee">
+          <img src="assets/img/logoHero.png" alt="ロゴ" />
+        </div>
+        <div class="logo-marquee">
+          <img src="assets/img/logoHero.png" alt="ロゴ" />
+        </div>
+        <div class="logo-marquee">
+          <img src="assets/img/logoHero.png" alt="ロゴ" />
+        </div>
+        <div class="logo-marquee">
+          <img src="assets/img/logoHero.png" alt="ロゴ" />
+        </div>
+        <div class="logo-marquee">
+          <img src="assets/img/logoHero.png" alt="ロゴ" />
+        </div>
+        <div class="logo-marquee">
+          <img src="assets/img/logoHero.png" alt="ロゴ" />
+        </div>
+        <div class="logo-marquee">
+          <img src="assets/img/logoHero.png" alt="ロゴ" />
+        </div>
+        <div class="logo-marquee">
+          <img src="assets/img/logoHero.png" alt="ロゴ" />
+        </div>
+        <div class="logo-marquee">
+          <img src="assets/img/logoHero.png" alt="ロゴ" />
+        </div>
+        <div class="logo-marquee">
+          <img src="assets/img/logoHero.png" alt="ロゴ" />
+        </div>
+        <div class="logo-marquee">
+          <img src="assets/img/logoHero.png" alt="ロゴ" />
+        </div>
+        <div class="logo-marquee">
+          <img src="assets/img/logoHero.png" alt="ロゴ" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 5) Hover Effect + Thumbnails (3カラム) -->
+    <section class="gallery" id="services" aria-label="ギャラリーセクション">
+      <div class="gallery__inner container">
+        <div class="gallery__grid">
+          <a href="#" class="gallery__card gallery__card--hover" aria-label="カード1">
+            <div class="gallery__media" aria-hidden="true">
+              <img src="assets/img/logoHero.png" alt="ロゴ" />
+            </div>
+          </a>
+          <a href="#" class="gallery__card gallery__card--hover" aria-label="カード2">
+            <div class="gallery__media" aria-hidden="true">
+              <img src="assets/img/logoHero.png" alt="ロゴ" />
+            </div>
+          </a>
+          <a href="#" class="gallery__card gallery__card--hover" aria-label="カード3">
+            <div class="gallery__media" aria-hidden="true">
+              <img src="assets/img/logoHero.png" alt="ロゴ" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6) Banner + Full Width Image (横幅いっぱいグレー帯) -->
+    <section class="banner" aria-label="フル幅バナー（ダミー）">
+      <div class="banner__strip" aria-hidden="true"></div>
+    </section>
+
+    <!-- 7) Slider / Carousel（静的UI） -->
+    <section class="slider" id="blog" aria-label="スライダー(ダミーUI)">
+      <div class="slider__inner container">
+        <button class="slider__arrow slider__arrow--prev" aria-label="前へ">◀</button>
+        <div class="slider__track">
+          <div class="slider__slide" aria-hidden="false"></div>
+          <div class="slider__slide" aria-hidden="true"></div>
+          <div class="slider__slide" aria-hidden="true"></div>
+        </div>
+        <button class="slider__arrow slider__arrow--next" aria-label="次へ">▶</button>
+      </div>
+      <div class="slider__dots" role="tablist" aria-label="スライド位置">
+        <button class="slider__dot slider__dot--active" role="tab" aria-selected="true" aria-controls="slide-1"></button>
+        <button class="slider__dot" role="tab" aria-selected="false" aria-controls="slide-2"></button>
+        <button class="slider__dot" role="tab" aria-selected="false" aria-controls="slide-3"></button>
+      </div>
+    </section>
+
+    <!-- 8) Lead Magnet + Email Subscribe Box -->
+    <section class="lead" id="contact" aria-label="資料ダウンロード（ダミー）">
+      <div class="lead__inner container">
+        <h2 class="lead__title">DOWNLOAD YOUR FREEBIE</h2>
+        <p class="lead__detail">freebie details</p>
+        <form class="lead__form" action="#" method="post">
+          <input class="lead__input" type="text" name="name" placeholder="Your name" />
+          <input class="lead__input" type="email" name="email" placeholder="Your email" />
+          <input class="lead__input" type="text" name="company" placeholder="Company" />
+          <button class="lead__button button button--primary" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner container">
+      <nav class="footer__nav" aria-label="フッターメニュー">
+        <ul class="footer__menu">
+          <li class="footer__item"><a class="footer__link" href="#home">Home</a></li>
+          <li class="footer__item"><a class="footer__link" href="#about">About</a></li>
+          <li class="footer__item"><a class="footer__link" href="#services">Services</a></li>
+          <li class="footer__item"><a class="footer__link" href="#blog">Blog</a></li>
+          <li class="footer__item"><a class="footer__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <small class="footer__copy">© 2025 Company Name</small>
+    </div>
+  </footer>
+  <!-- 9) Footer Area / Footer Menu -->
+</body>
+</html>
